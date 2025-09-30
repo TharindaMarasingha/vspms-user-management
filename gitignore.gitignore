@@ -1,0 +1,27 @@
+# Java / Maven
+target/
+*.iml
+.idea/
+.project
+.classpath
+.settings/
+.mvn/wrapper/maven-wrapper.jar
+dependency-reduced-pom.xml
+
+# Logs
+*.log
+logs/
+hs_err_pid*
+replay_pid*
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Node / Frontend (if you add React later)
+node_modules/
+dist/
+.build/
+.cache/
+.env
+.env.local
