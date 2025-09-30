@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/vspms?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    username: root
+    password: 03200321
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate.dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: false
+
+server:
+  port: 8080
+
+security:
+  jwt:
+    secret: "change-this-super-secret-at-least-256-bits"
+    issuer: "vspms"
+    accessTtlMinutes: 15
+    refreshTtlDays: 7
