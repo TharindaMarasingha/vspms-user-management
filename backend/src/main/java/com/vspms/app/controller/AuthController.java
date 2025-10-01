@@ -25,8 +25,15 @@ public class AuthController {
     u.setFullName(req.fullName());
     u.setEmail(req.email().toLowerCase());
     u.setPasswordHash(encoder.encode(req.password()));
-    u.setItNumber(req.itNumber());
-    u.getRoles().add(roleRepo.findByName(req.role() == null ? "CUSTOMER" : req.role()).orElseThrow());
+    String requestedRole = req.role() == null ? "CUSTOMER" : req.role().toUpperCase();
+    if ("ADMIN".equals(requestedRole)) {
+      if (req.adminCode() == null || !req.adminCode().equals("11111")) {
+        throw new ResponseStatusException(HttpStatus.FORBIDDEN, "Password error");
+      }
+    }
+    var role = roleRepo.findByName(requestedRole)
+            .orElseGet(() -> roleRepo.findByName("CUSTOMER").orElseThrow());
+    u.getRoles().add(role);
     userRepo.save(u);
     return ResponseEntity.status(201).body(new AuthResponse(jwt.generateAccessToken(u)));
   }

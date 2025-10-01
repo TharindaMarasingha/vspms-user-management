@@ -5,6 +5,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: 03200321
       MYSQL_DATABASE: vspms
+      MYSQL_ROOT_HOST: "%"
     ports:
       - "3306:3306"
     volumes:

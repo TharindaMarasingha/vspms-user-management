@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VSPMS — Product Details</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <div class="brand-group">
+        <h1 class="brand">Vehicle Spare-Parts <span>Management System</span></h1>
+        <p class="brand-tagline">Product details</p>
+      </div>
+      <nav class="top-links site-nav">
+        <a class="link" href="/home.html">Home</a>
+        <a class="link" href="/cart.html">Cart</a>
+        <a class="link" href="/">Sign In</a>
+      </nav>
+    </header>
+
+    <div class="breadcrumbs">
+      <span class="crumb">Home</span><span class="sep">›</span><span class="crumb">Product</span><span class="sep">›</span><span class="crumb active">Alternator</span>
+    </div>
+
+    <main class="space-y-8">
+      <section style="display:grid; grid-template-columns: 1fr 1fr; gap:24px;">
+        <div class="card">
+          <div class="p-img" style="border-radius: 12px;">
+            <img src="https://dummyimage.com/800x600/EEF1F4/2B2F36.png&text=Product" alt="" style="max-height:100%; max-width:100%;">
+          </div>
+          <div style="margin-top:10px; display:grid; grid-template-columns: repeat(5,1fr); gap:8px;">
+            <div class="p-img" style="border-radius: 8px; height:64px;"></div>
+            <div class="p-img" style="border-radius: 8px; height:64px;"></div>
+            <div class="p-img" style="border-radius: 8px; height:64px;"></div>
+            <div class="p-img" style="border-radius: 8px; height:64px;"></div>
+            <div class="p-img" style="border-radius: 8px; height:64px;"></div>
+          </div>
+        </div>
+        <div class="card" style="display:flex; flex-direction:column; gap:12px;">
+          <h2 style="margin:0; font-size:24px;">Alternator – OEM 12345</h2>
+          <div style="display:flex; gap:8px; align-items:center;">
+            <span class="status-pill">In Stock</span>
+            <span class="brand-tagline">Part No. OEM-12345</span>
+          </div>
+          <div style="display:grid; grid-template-columns: repeat(3,1fr); gap:8px;">
+            <select><option>Make</option></select>
+            <select><option>Model</option></select>
+            <select><option>Year</option></select>
+          </div>
+          <div style="display:flex; align-items:center; gap:16px;">
+            <div class="price" style="font-size:22px;">$129.00</div>
+            <div style="display:inline-flex; border:1px solid var(--stroke); border-radius:12px; overflow:hidden;">
+              <button style="width:40px; height:40px;">-</button>
+              <input value="1" style="width:48px; height:40px; text-align:center; border:none;" readonly />
+              <button style="width:40px; height:40px;">+</button>
+            </div>
+          </div>
+          <div style="display:flex; gap:8px;">
+            <a class="cta" href="/cart.html">Add to Cart →</a>
+            <button class="outline" type="button">Wishlist</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+          <button class="nav-chip">Overview</button>
+          <button class="nav-chip">Specs</button>
+          <button class="nav-chip">Compatibility</button>
+          <button class="nav-chip">Supplier</button>
+        </div>
+        <p style="margin-top:10px; color:var(--muted);">High quality alternator compatible with multiple models. Backed by warranty.</p>
+      </section>
+    </main>
+
+    <footer>
+      <span>&copy; <span id="year"></span> VSPMS</span>
+    </footer>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
+
+

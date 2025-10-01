@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --header-height: 72px;
+}
+
+html, body, #root { height: 100%; }
+body { @apply bg-softgray text-slate font-sans; }
+
+/* Glass effect helper */
+.glass {
+  @apply bg-white/60 backdrop-blur-md shadow-soft;
+}
+
+/* Focus ring */
+.focus-ring {
+  @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white;
+}
+
+/* Card */
+.card {
+  @apply bg-white rounded-xl shadow-soft;
+}
+
+/* Container */
+.container-1280 {
+  @apply max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Scrollbar subtle */
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-thumb { background: #cfd6dd; border-radius: 9999px; }
+*::-webkit-scrollbar-track { background: transparent; }
+
+/* Micro-interactions */
+.hover-lift { @apply transition-transform duration-150 ease-sprung hover:-translate-y-0.5 hover:shadow-lift; }
+
+/* Breadcrumbs */
+.breadcrumb { @apply text-sm text-coolgray flex items-center gap-2; }
+.breadcrumb .sep { @apply opacity-60; }
+
+/* Tabs */
+.tabs { @apply grid grid-cols-2 bg-softgray rounded-lg p-1; }
+.tab { @apply text-center py-2 rounded-md transition-colors duration-150; }
+.tab.active { @apply bg-white shadow-soft text-primary font-medium; }
+
+/* Toast */
+.toast-enter { animation: fadeIn 160ms var(--ease, cubic-bezier(0.22,1,0.36,1)) both; }
+

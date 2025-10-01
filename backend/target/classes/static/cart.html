@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VSPMS — Cart / Checkout</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <div class="brand-group">
+        <h1 class="brand">Vehicle Spare-Parts <span>Management System</span></h1>
+        <p class="brand-tagline">Cart and Checkout</p>
+      </div>
+      <nav class="top-links site-nav">
+        <a class="link" href="/home.html">Home</a>
+        <a class="link" href="/">Sign In</a>
+      </nav>
+    </header>
+
+    <div class="breadcrumbs">
+      <span class="crumb">Home</span><span class="sep">›</span><span class="crumb active">Cart</span>
+    </div>
+
+    <main class="space-y-8">
+      <div style="display:flex; gap:8px; flex-wrap: wrap; align-items:center;">
+        <span class="nav-chip" style="background: var(--primary); color:#fff;">Cart</span>
+        <span class="nav-chip">Address</span>
+        <span class="nav-chip">Payment</span>
+        <span class="nav-chip">Review</span>
+      </div>
+
+      <section style="display:grid; grid-template-columns: 2fr 1fr; gap:16px; align-items:start;">
+        <div class="space-y-4">
+          <div class="card">Your cart items will appear here.</div>
+          <div class="card">
+            <div class="brand-tagline" style="color:var(--text); font-weight:600;">Shipping Address</div>
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:8px; margin-top:8px;">
+              <input placeholder="Address" />
+              <input placeholder="City" />
+              <input placeholder="Postal Code" />
+              <input placeholder="Country" />
+            </div>
+          </div>
+          <div class="card">
+            <div class="brand-tagline" style="color:var(--text); font-weight:600;">Payment</div>
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:8px; margin-top:8px;">
+              <input placeholder="Card Number" />
+              <input placeholder="Name on Card" />
+              <input placeholder="MM/YY" />
+              <input placeholder="CVC" />
+            </div>
+          </div>
+          <button class="cta" type="button">Next →</button>
+        </div>
+        <aside class="card" style="position: sticky; top: 24px; height:max-content;">
+          <div class="brand-tagline" style="color:var(--text); font-weight:600;">Order Summary</div>
+          <div style="font-size:14px; color:var(--muted); margin-top:6px;">
+            <div style="display:flex; justify-content:space-between; margin:6px 0;"><span>Subtotal</span><span>$256.00</span></div>
+            <div style="display:flex; justify-content:space-between; margin:6px 0;"><span>Shipping</span><span>$10.00</span></div>
+            <div style="display:flex; justify-content:space-between; font-weight:600; color:var(--text); margin-top:10px;"><span>Total</span><span>$266.00</span></div>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer>
+      <span>&copy; <span id="year"></span> VSPMS</span>
+    </footer>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
+
+

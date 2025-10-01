@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vehicle Spare Parts Management System </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <div class="brand-group">
+        <h1 class="brand">Vehicle Spare Parts <span>Management System</span></h1>
+        <p class="brand-tagline">A single, secure place to manage spare part inventory, suppliers, and customer orders.</p>
+      </div>
+      <nav class="top-links site-nav">
+        <a class="link" href="/">Sign In</a>
+        <a class="link" href="/cart.html">Cart</a>
+        <a class="link" href="/admin.html">Admin</a>
+      </nav>
+    </header>
+
+    <div class="breadcrumbs">
+      <span class="crumb">Home</span>
+      <span class="sep">›</span>
+      <span class="crumb active">Storefront</span>
+    </div>
+
+    <main class="space-y-10" style="width: 100%">
+      <section class="search-hero">
+        <div style="padding: 32px 24px; display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px; align-items: center;">
+          <div>
+            <h2 style="margin:0; font-size: 28px; font-weight: 700;">Find. Manage. Deliver. Faster.</h2>
+            <p style="opacity:.9; margin:8px 0 16px; max-width: 520px;">Modern storefront for automotive spare parts with powerful back-office. Search parts, brand, vehicle…</p>
+            <div class="search-box">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3-3"></path></svg>
+              <input placeholder="Search parts, brand, vehicle…" />
+              <button class="cta" type="button">Search</button>
+            </div>
+          </div>
+          <div style="background: rgba(255,255,255,.15); border-radius: 16px; padding: 16px;">
+            <div style="font-weight:600; margin-bottom:8px;">Quick Links</div>
+            <div class="site-nav">
+              <span class="nav-chip">All Categories</span>
+              <span class="nav-chip">Track Order</span>
+              <span class="nav-chip">Compare</span>
+              <span class="nav-chip">Support</span>
+              <span class="nav-chip">+94 11 234 5678</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3 class="brand-tagline" style="color:var(--text); font-weight:600;">Shop by Category</h3>
+        <div class="cat-grid" style="margin-top:12px;">
+          <div class="cat-tile">Engine &amp; Drivetrain</div>
+          <div class="cat-tile">Electrical &amp; Sensors</div>
+          <div class="cat-tile">Body &amp; Exterior</div>
+          <div class="cat-tile">Brakes &amp; Suspension</div>
+          <div class="cat-tile">Fluids &amp; Filters</div>
+          <div class="cat-tile">Tools &amp; Accessories</div>
+        </div>
+      </section>
+
+      <section>
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:8px;">
+          <h3 class="brand-tagline" style="color:var(--text); font-weight:600;">Featured Parts</h3>
+          <a href="#" style="color:var(--primary); text-decoration:none;">View all</a>
+        </div>
+        <div class="grid-products">
+          <article class="p-card">
+            <div class="p-img"><img src="https://dummyimage.com/600x400/EEF1F4/2B2F36.png&text=Part" alt="" style="max-height:100%; max-width:100%; padding:14px"></div>
+            <div class="p-body">
+              <div style="font-weight:600; min-height:40px;">Alternator – OEM Quality</div>
+              <div class="compat"><span class="chip">Toyota</span><span class="chip">Honda</span><span class="chip">Nissan</span></div>
+              <div style="display:flex; align-items:center; justify-content:space-between;">
+                <div><div class="price">$129.00</div><div style="font-size:12px; color:var(--muted)">★★★★☆ (123)</div></div>
+                <a class="cta" href="/product.html">Add to Cart →</a>
+              </div>
+            </div>
+          </article>
+          <article class="p-card">
+            <div class="p-img"><img src="https://dummyimage.com/600x400/EEF1F4/2B2F36.png&text=Part" alt="" style="max-height:100%; max-width:100%; padding:14px"></div>
+            <div class="p-body">
+              <div style="font-weight:600; min-height:40px;">Brake Pad Set – Ceramic</div>
+              <div class="compat"><span class="chip">BMW</span><span class="chip">Audi</span><span class="chip">VW</span></div>
+              <div style="display:flex; align-items:center; justify-content:space-between;">
+                <div><div class="price">$79.00</div><div style="font-size:12px; color:var(--muted)">★★★★☆ (87)</div></div>
+                <a class="cta" href="/product.html">Add to Cart →</a>
+              </div>
+            </div>
+          </article>
+          <article class="p-card">
+            <div class="p-img"><img src="https://dummyimage.com/600x400/EEF1F4/2B2F36.png&text=Part" alt="" style="max-height:100%; max-width:100%; padding:14px"></div>
+            <div class="p-body">
+              <div style="font-weight:600; min-height:40px;">Timing Belt Kit</div>
+              <div class="compat"><span class="chip">Mazda</span><span class="chip">Toyota</span></div>
+              <div style="display:flex; align-items:center; justify-content:space-between;">
+                <div><div class="price">$99.00</div><div style="font-size:12px; color:var(--muted)">★★★★☆ (54)</div></div>
+                <a class="cta" href="/product.html">Add to Cart →</a>
+              </div>
+            </div>
+          </article>
+          <article class="p-card">
+            <div class="p-img"><img src="https://dummyimage.com/600x400/EEF1F4/2B2F36.png&text=Part" alt="" style="max-height:100%; max-width:100%; padding:14px"></div>
+            <div class="p-body">
+              <div style="font-weight:600; min-height:40px;">O2 Sensor – Universal</div>
+              <div class="compat"><span class="chip">Nissan</span><span class="chip">Honda</span></div>
+              <div style="display:flex; align-items:center; justify-content:space-between;">
+                <div><div class="price">$49.00</div><div style="font-size:12px; color:var(--muted)">★★★★☆ (32)</div></div>
+                <a class="cta" href="/product.html">Add to Cart →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="promo-strip">
+        <div class="promo-item"><span>Track Order</span><a href="#" style="color:var(--primary)">Learn more →</a></div>
+        <div class="promo-item"><span>Compare</span><a href="#" style="color:var(--primary)">Learn more →</a></div>
+        <div class="promo-item"><span>Customer Support</span><a href="#" style="color:var(--primary)">Learn more →</a></div>
+      </section>
+
+      <section class="card">
+        <div class="brand-tagline" style="color:var(--text); font-weight:600; margin-bottom:8px;">What customers say</div>
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap:12px; color:var(--muted);">
+          <blockquote class="testimonial">“Fast delivery and genuine parts.”</blockquote>
+          <blockquote class="testimonial">“Easy to find compatible parts.”</blockquote>
+          <blockquote class="testimonial">“Great support for suppliers and customers.”</blockquote>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>&copy; <span id="year"></span> VSPMS</span>
+    </footer>
+  </div>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
+

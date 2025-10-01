@@ -25,6 +25,7 @@ public class SecurityConfig {
         .sessionManagement(sm -> sm.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
         .authorizeHttpRequests(auth -> auth
             .requestMatchers("/api/auth/**").permitAll()
+            .requestMatchers("/", "/index.html", "/assets/**", "/static/**", "/css/**", "/js/**").permitAll()
             .requestMatchers(HttpMethod.GET, "/api/users/me").authenticated()
             .anyRequest().authenticated()
         )
