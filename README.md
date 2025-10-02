@@ -16,3 +16,6 @@ Owner: **MTN Marasingha (IT24103037)**
 
 ## CI
 - GitHub Actions workflow in `.github/workflows/ci.yml` to build on push.
+
+
+MAIN CLASS : com.vspms.app.VspmsUserManagementApplication
