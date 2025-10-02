@@ -15,13 +15,12 @@ html, body { min-height: 100%; }
 body {
   margin: 0;
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.08), transparent 55%),
-              radial-gradient(circle at bottom right, rgba(249, 115, 22, 0.08), transparent 55%),
-              var(--bg);
+  background: var(--bg);
   color: var(--text);
   display: flex;
   flex-direction: column;
 }
+.wrap { width: min(1280px, 94%); margin: 0 auto; }
 .container {
   width: min(960px, 92%);
   margin: 0 auto;
@@ -31,6 +30,19 @@ body {
   gap: 32px;
   flex: 1;
 }
+
+/* Header (utility bar + main header + category strip) */
+.utility-bar { background: var(--primary); color: #fff; font-size: 12px; }
+.utility-bar .utility-inner { display:flex; align-items:center; justify-content:space-between; padding: 6px 0; opacity:.95; }
+.main-header { background: var(--primary); color:#fff; }
+.header-inner { display:flex; align-items:center; justify-content:space-between; gap:14px; padding: 14px 0; }
+.logo-chip { display:inline-flex; align-items:center; gap:10px; text-decoration:none; color:#fff; }
+.logo-chip .mark { width:36px; height:36px; border-radius:10px; background: #184b61; display:inline-flex; align-items:center; justify-content:center; }
+.logo-chip .title { font-weight:700; letter-spacing:.2px; }
+.site-name { font-weight:700; letter-spacing:.2px; font-size: 18px; }
+.cat-chip { background:#fff; border:1px solid var(--stroke); border-radius:8px; padding:6px 10px; font-weight:600; }
+.cat-chip { background:#fff; border:1px solid var(--stroke); border-radius:8px; padding:6px 10px; font-weight:600; }
+.auth-main { padding: 36px 0 60px; display:flex; justify-content:center; }
 .site-header {
   display: flex;
   align-items: flex-start;
@@ -52,6 +64,12 @@ body {
   color: var(--muted);
   max-width: 420px;
 }
+/* Cleaner brand presentation */
+.brand { font-family: 'Poppins', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; letter-spacing: -0.02em; line-height: 1.1; font-weight: 700; font-size: clamp(36px, 5vw, 48px); }
+.brand .accent { color: var(--accent); font-weight: 700; }
+.brand-group.logo-lockup { gap: 16px; }
+.logo-mark { position: relative; }
+.logo-mark::after { content: ''; position: absolute; inset: -6px; border-radius: 18px; background: transparent; pointer-events: none; }
 .top-links { display: flex; gap: 10px; }
 .link {
   background: var(--surface);
@@ -116,7 +134,7 @@ main {
   bottom: -1px;
   height: 3px;
   border-radius: 999px;
-  background: linear-gradient(90deg, var(--accent), var(--primary));
+  background: var(--primary);
 }
 .hidden { display: none; }
 .form {
@@ -237,7 +255,8 @@ input:focus, select:focus {
   justify-content: center;
   font-weight: 600;
 }
-.social.google .icon { background: #fee2e2; color: #ef4444; }
+.social.google .icon { background: transparent; color: inherit; }
+.social .icon svg { width: 18px; height: 18px; display: block; }
 .social.apple .icon { background: #111827; color: #ffffff; font-size: 16px; }
 .profile-card {
   display: flex;
@@ -259,7 +278,7 @@ input:focus, select:focus {
   width: 64px;
   height: 64px;
   border-radius: 18px;
-  background: linear-gradient(135deg, var(--accent), var(--primary));
+  background: var(--primary);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -368,6 +387,14 @@ footer {
   color: var(--muted);
   padding-bottom: 28px;
 }
+
+/* Footer (wide) */
+.footer-wide { background:#22272e; color:#c7cbd2; }
+.footer-wide .cols { display:grid; gap:20px; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); padding: 28px 0; }
+.footer-wide a { color:#c7cbd2; text-decoration:none; }
+.footer-wide a:hover { color:#fff; }
+.footer-brand { display:flex; align-items:center; gap:10px; color:#fff; }
+.footer-bottom { border-top:1px solid rgba(255,255,255,0.08); padding:12px 0 20px; font-size:12px; color:#9aa3ad; }
 @media (max-width: 720px) {
   .container { padding-top: 36px; gap: 24px; }
   .card { padding: 28px 24px; border-radius: 20px; }
@@ -402,7 +429,7 @@ footer {
 /* Storefront helpers */
 .site-nav { display:flex; gap:12px; align-items:center; flex-wrap: wrap; }
 .nav-chip { background: rgba(255,255,255,0.9); border: 1px solid var(--stroke); padding: 8px 12px; border-radius: 12px; font-weight: 600; }
-.search-hero { background: linear-gradient(180deg, var(--primary), #164a5f); color: #fff; border-radius: 20px; box-shadow: var(--shadow); }
+.search-hero { background: var(--primary); color: #fff; border-radius: 20px; box-shadow: var(--shadow); }
 .search-box { display:flex; align-items:center; gap:10px; background:#fff; border-radius:16px; padding:10px 12px; box-shadow: 0 10px 24px rgba(0,0,0,0.12); }
 .search-box input { border:none; background:transparent; padding:10px; flex:1; outline:none; font-size:16px; }
 .cat-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(160px,1fr)); gap:12px; }
@@ -422,10 +449,10 @@ footer {
 
 /* === Professional polish for Auth (overrides) === */
 .logo-lockup { display:flex; align-items:flex-start; gap:14px; }
-.logo-mark { width:48px; height:48px; border-radius:14px; background: linear-gradient(135deg, var(--primary), #164a5f); color:#fff; display:inline-flex; align-items:center; justify-content:center; box-shadow: 0 10px 24px rgba(0,0,0,0.12); }
+.logo-mark { width:48px; height:48px; border-radius:14px; background: var(--primary); color:#fff; display:inline-flex; align-items:center; justify-content:center; box-shadow: 0 10px 24px rgba(0,0,0,0.12); }
 .brand { font-family: 'Poppins', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; }
 .elevate { box-shadow: 0 24px 50px rgba(15,23,42,0.14), 0 6px 14px rgba(15,23,42,0.10); border-radius: 20px; }
-.tabs .tab.active::after { background: linear-gradient(90deg, var(--primary), var(--accent)); }
+.tabs .tab.active::after { background: var(--primary); }
 
 /* Floating Home pill */
 .pill { background: rgba(255,255,255,0.92); border:1px solid var(--stroke); padding:10px 16px; border-radius: 999px; color: var(--text); text-decoration:none; font-weight:600; box-shadow: 0 10px 24px rgba(0,0,0,0.08); transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease; }
